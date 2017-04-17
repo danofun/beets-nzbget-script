@@ -1,1 +1,1 @@
-A nzbget post processing script that triggers a beets import via ssh command which is sent to a beets docker container's host system.
+A nzbget post processing script that triggers a beets import via ssh command which is sent to a beets docker container's host system. The ssh command can be authenticated via password or ssh key with an optional paraphrase.
