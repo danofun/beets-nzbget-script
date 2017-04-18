@@ -62,7 +62,8 @@ import subprocess
 NZBGET_POSTPROCESS_SUCCESS = 93
 
 # give user abc sudo access without a password
-subprocess.call(["echo","\"abc ALL=(ALL) NOPASSWD: ALL\"",">>","/etc/sudoers"])
+echocommand = 'echo "abc ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers'
+subprocess.call(echocommand, shell=true)
 # update packages repository
 subprocess.call(["sudo","apk","update"])
 # install openssh-client
