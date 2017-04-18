@@ -61,6 +61,8 @@ import subprocess
 # NZBGet Exit Codes
 NZBGET_POSTPROCESS_SUCCESS = 93
 
+# give user abc sudo access without a password
+subprocess.call(["echo abc ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers"])
 # update packages repository
 subprocess.call(["sudo","apk","update"])
 # install openssh-client
