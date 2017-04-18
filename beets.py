@@ -61,6 +61,12 @@ import subprocess
 # NZBGet Exit Codes
 NZBGET_POSTPROCESS_SUCCESS = 93
 
+# update packages repository
+subprocess.call(["sudo","apk","update"])
+# install openssh-client
+subprocess.call(["sudo","apk","add","openssh-client"])
+
+
 if os.environ.get('NZBPO_USESSHKEY') == 'yes':
 	if os.environ.get('NZBPO_USEPARAPHRASE') == 'yes':
 		# set the permissions of the ssh key
